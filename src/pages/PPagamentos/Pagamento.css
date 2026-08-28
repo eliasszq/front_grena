@@ -1,0 +1,317 @@
+.pagamento-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #f2ece7;
+}
+
+.pagamento-page h1 {
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.pagamento-container {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 25px;
+}
+
+/* MÉTODOS */
+
+.pagamento-metodos {
+  background: #20121a;
+  border: 1px solid #3a2230;
+  border-radius: 14px;
+  padding: 20px;
+  height: fit-content;
+}
+
+.pagamento-metodos h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* BOTÕES DOS MÉTODOS */
+
+.metodo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: #170c12;
+  color: #f2ece7;
+
+  border: 1px solid #3a2230;
+  border-radius: 10px;
+
+  padding: 15px;
+  margin-bottom: 12px;
+
+  cursor: pointer;
+  text-align: left;
+
+  transition: 0.2s;
+}
+
+.metodo:hover {
+  border-color: #9b3350;
+  transform: translateY(-1px);
+}
+
+.metodo.selecionado {
+  border: 2px solid #9b3350;
+  background: rgba(155, 51, 80, 0.15);
+}
+
+.metodo > span {
+  font-size: 25px;
+}
+
+.metodo div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metodo strong {
+  font-size: 15px;
+}
+
+.metodo small {
+  color: #b8a9ac;
+  font-size: 12px;
+}
+
+/* ÁREA DE PAGAMENTO */
+
+.pagamento-detalhes {
+  min-width: 0;
+}
+
+/* BOX DO PAGAMENTO */
+
+.pagamento-box {
+  background: #20121a;
+  border: 1px solid #3a2230;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.pagamento-box h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* PIX */
+
+.pix-icon {
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 25px auto;
+
+  background: white;
+  color: #333;
+
+  border-radius: 10px;
+
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.pagamento-box p {
+  color: #b8a9ac;
+  line-height: 1.5;
+}
+
+/* VALOR */
+
+.valor-pagamento {
+  display: block;
+
+  margin-top: 20px;
+
+  color: #d9b25c;
+
+  font-size: 26px;
+}
+
+/* FORMULÁRIO DO CARTÃO */
+
+.pagamento-box label {
+  display: block;
+
+  margin-top: 15px;
+  margin-bottom: 7px;
+
+  color: #b8a9ac;
+
+  font-size: 13px;
+}
+
+.pagamento-box input {
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #150a10;
+  color: #f2ece7;
+
+  border: 1px solid #3a2230;
+  border-radius: 8px;
+
+  padding: 12px;
+
+  outline: none;
+}
+
+.pagamento-box input:focus {
+  border-color: #9b3350;
+}
+
+.pagamento-box input::placeholder {
+  color: #6f6065;
+}
+
+/* VALIDADE E CVV */
+
+.cartao-linha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* RESUMO */
+
+.pagamento-resumo {
+  background: #20121a;
+
+  border: 1px solid #3a2230;
+  border-radius: 14px;
+
+  padding: 20px;
+}
+
+.pagamento-resumo h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.resumo-linha {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+
+  color: #b8a9ac;
+}
+
+.resumo-linha.total {
+  border-top: 1px solid #3a2230;
+
+  padding-top: 15px;
+  margin-top: 15px;
+
+  color: #f2ece7;
+
+  font-size: 20px;
+}
+
+.resumo-linha.total strong:last-child {
+  color: #d9b25c;
+}
+
+/* MENSAGEM */
+
+.pagamento-detalhes .toast {
+  margin-top: 15px;
+
+  background: rgba(76, 175, 125, 0.12);
+
+  border: 1px solid #4caf7d;
+  border-radius: 8px;
+
+  padding: 12px;
+
+  color: #4caf7d;
+}
+
+/* BOTÃO FINALIZAR */
+
+.pagamento-confirmar {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #9b3350;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.pagamento-confirmar:hover {
+  background: #b23e5e;
+}
+
+.pagamento-confirmar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+  .pagamento-container {
+    grid-template-columns: 1fr;
+  }
+
+  .pagamento-metodos {
+    order: 1;
+  }
+
+  .pagamento-detalhes {
+    order: 2;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .pagamento-page {
+    padding: 25px 15px;
+  }
+
+  .pagamento-page h1 {
+    font-size: 26px;
+  }
+
+  .cartao-linha {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .metodo {
+    padding: 12px;
+  }
+
+}

@@ -71,9 +71,12 @@ function PCarrinho() {
               <strong>{money(total)}</strong>
             </div>
 
-            <button className="primary carrinho-finalizar" onClick={finalizarCompra} disabled={finalizando}>
-              {finalizando ? "Finalizando..." : "Finalizar compra"}
-            </button>
+            <button
+  className="primary carrinho-finalizar"
+  onClick={() => navigate("/pagamento")}
+>
+  Finalizar compra
+</button>
           </>
         )}
       </section>
